@@ -220,7 +220,8 @@ strong {
   font-size: 18px;
 }
 
-.skills-list__item {
+.skills-list__item,
+.languages-list__item {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 18px;
