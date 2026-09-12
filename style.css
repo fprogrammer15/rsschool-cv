@@ -11,6 +11,7 @@
   --code-bg: #f6f7f9;
   --topbar: rgba(255, 255, 255, 0.92);
   --sheet-width: 1180px;
+  --font-mono: "Consolas", "SFMono-Regular", "Menlo", "Liberation Mono", "Courier New", monospace;
 }
 
 html {
@@ -69,13 +70,13 @@ strong {
 /* SITE-HEADER */
 .topbar {
   position: sticky;
-  top: 20px;
+  top: 0;
   z-index: 10;
   background: var(--topbar);
+  border-bottom: 1px solid var(--rule);
 }
 
 .topbar-inner {
-  display: flex;
   max-width: var(--sheet-width);
   margin: 0 auto;
   padding: 10px 20px;
@@ -131,7 +132,6 @@ strong {
   justify-content: space-between;
   gap: 32px;
   padding-bottom: 28px;
-  /* border-bottom: 2px solid var(--rule-strong); */
 }
 
 .profile-wrapper {
@@ -168,29 +168,37 @@ strong {
 
 
 .site-list {
-  align-items: center;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
+
 .item-list {
   margin-bottom: 10px;
 }
 
 .item-link {
-  text-decoration:none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: var(--ink);
+  text-decoration: none;
+}
+
+.item-link span {
+  overflow-wrap: anywhere;
 }
 
 .icon {
-  margin-right: 10px;
+  flex-shrink: 0;
   width: 30px;
   height: 30px;
   object-fit: contain;
-  vertical-align: middle;
 }
 
 .section-divider {
   border: none;
-  border-top: 1px solid #000;
+  border-top: 1px solid var(--rule-strong);
 }
 
 .cv-section {
@@ -262,6 +270,10 @@ strong {
   font-size: 18px;
 }
 
+.course-list__item a {
+  overflow-wrap: anywhere;
+}
+
 .education-title {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -327,9 +339,9 @@ strong {
 }
 
 .footer-inner {
-  max-width: 1100px;
+  max-width: var(--sheet-width);
   margin: 0 auto;
-  padding: 20px 20px;
+  padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
