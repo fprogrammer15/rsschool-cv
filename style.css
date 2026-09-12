@@ -453,3 +453,30 @@ strong {
     font-size: 0.8rem;
   }
 }
+
+/* PRINT */
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  .profile {
+    max-width: none;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    box-shadow: none;
+  }
+
+  .code {
+    white-space: pre-wrap;
+  }
+
+  .footer {
+    border-top: none;
+  }
+}
