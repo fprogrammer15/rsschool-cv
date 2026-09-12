@@ -215,18 +215,18 @@
             <h2 class="section-title">Code example</h2>
             <p>Solution of the Codewars kata <a href="https://www.codewars.com/kata/541c8630095125aba6000c00" target="_blank" rel="noopener">Sum of Digits / Digital Root</a> (6 kyu). The digital root is the recursive sum of all digits of a number until a single digit remains.</p>
             <pre class="code"><code><span class="c">// Repeatedly sum the digits while the number has more than one digit</span>
-                <span class="k">function</span> <span class="f">digitalRoot</span>(n) {
-                    <span class="k">while</span> (n &gt; <span class="n">9</span>) {
-                        n = <span class="f">String</span>(n)
-                        .<span class="f">split</span>(<span class="s">''</span>)
-                        .<span class="f">reduce</span>((sum, digit) =&gt; sum + <span class="f">Number</span>(digit), <span class="n">0</span>);
-                    }
-                    <span class="k">return</span> n;
-                }
+<span class="k">function</span> <span class="f">digitalRoot</span>(n) {
+    <span class="k">while</span> (n &gt; <span class="n">9</span>) {
+        n = <span class="f">String</span>(n)
+        .<span class="f">split</span>(<span class="s">''</span>)
+        .<span class="f">reduce</span>((sum, digit) =&gt; sum + <span class="f">Number</span>(digit), <span class="n">0</span>);
+    }
+    <span class="k">return</span> n;
+}
 
-                <span class="f">digitalRoot</span>(<span class="n">16</span>);     <span class="c">// 1 + 6 = 7</span>
-                <span class="f">digitalRoot</span>(<span class="n">942</span>);    <span class="c">// 9 + 4 + 2 = 15, 1 + 5 = 6</span>
-                <span class="f">digitalRoot</span>(<span class="n">493193</span>); <span class="c">// 4 + 9 + 3 + 1 + 9 + 3 = 29, 2 + 9 = 11, 1 + 1 = 2</span></code></pre>
+<span class="f">digitalRoot</span>(<span class="n">16</span>);     <span class="c">// 1 + 6 = 7</span>
+<span class="f">digitalRoot</span>(<span class="n">942</span>);    <span class="c">// 9 + 4 + 2 = 15, 1 + 5 = 6</span>
+<span class="f">digitalRoot</span>(<span class="n">493193</span>); <span class="c">// 4 + 9 + 3 + 1 + 9 + 3 = 29, 2 + 9 = 11, 1 + 1 = 2</span></code></pre>
             </section>
 
             <hr class="section-divider">
